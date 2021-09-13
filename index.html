@@ -22,7 +22,10 @@ body {
 	box-shadow:0 0 12px #ccc;
 	background-color:#fff;
 	max-width:64rem;
-	margin:auto;
+	margin:0 auto 12rem auto ;
+	}
+.footer {
+	box-shadow:0 0 12px #ccc;
 	}
 h1,h2,h3 {
 	font-family:Merienda,Helvetica,Arial,sans-serif;
@@ -37,11 +40,11 @@ h1 {
 .bio {max-width:30rem;
 	margin:auto;
 	}
-.flexcontain{
-column-width:29.5rem;
-column-gap:1.9rem;
+.main{
+	column-width:29.5rem;
+	column-gap:1.9rem;
 	}
-.header, .footer, .flexcontain {
+.header, .footer, .main {
 	padding:1rem 1.5rem;
 	}
 .header img {
@@ -89,6 +92,21 @@ section,.footer {
 .medialist {
 	column-count:2;
 	}
+.footer {
+	position:fixed;
+	bottom:0;
+	background-color:#fff;
+	padding-top:0;
+	width:100%;
+	}
+@media (min-width:61rem) {
+.footer {
+		width:61rem;
+		}
+	}
+.container {
+
+	}
 .footer ul {
 	display:flex;
 	flex-direction:row;
@@ -126,7 +144,7 @@ section,.footer {
 
 <p class="bio">I train and advise academics, librarians, and other experts on how to work with open projects such as Wikipedia and Wikidata. I demystify geek stuff and help institutions get the maximum benefit in terms of reach, engaging the crowd, and creating educational resources.</p>
 </div>
-<div class="flexcontain">
+<div class="main">
 <section>
 <h2>Training and consultancy</h2>
 <p>Past and present clients include the <a href="https://en.wikipedia.org/wiki/Wikipedia:GLAM/Khalili">Khalili Collections</a>, University of Oxford <abbr title="Gardens, Libraries and Museums">GLAM</abbr> Division, the Voltaire Foundation, Jisc, Coventry University (for Wikipedia/Wikidata/Wikisource training), University of Gloucestershire (for social media training), and BBC Research &amp; Development (for decision theory expertise).</p>
@@ -186,10 +204,9 @@ section,.footer {
 </div>
 <div class="footer">
 <h2>Get in touch</h2>
-<ul>
-<li><a href="https://www.linkedin.com/in/martin-poulter-a523b836/"><img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABZElEQVRYw+2WvUrDUBTHf/c0tRCKT+BaEcHBRes7CC7SXRB9AlcHVxffQCcpFPwYRDfXzi6CtE4+gIhkSG5OHUzhEtoQStIs+UMg54vz49zLSYyqTqhQUmXzGiAPwA1wAJwBP2UAeBmxvogcTY04jkfGmPtlTuDJNYIgeCljAlkAW67h+/5mGQAmYw+EwKm19q7RaGwYY66BwiFM1Yso6xJ+AUPHXgO6yfswiU/VTeIAb8An0AZ2gNVMAlWdzHkGqbyeE+ulYgNVfY7jeN31R1Hkq+q5qsbz+ngUo8coivqtVsu6zmazGQAXqhoAl7MKC9mE4/H4Nt08NYkrYFQaQKfT0TAMV1R1X1UPrbVtN57APcyqLeQIrLW+iLzyf+kQkQ9r7a7ned9O2ntpExCR42nzROsicpJK+y0NANib4dvOBV8QgJfTVxrAwqoBaoDKAbL+Bxb9HOepzwWwFFV+BDVADfAH3Su5ujc+OzEAAAAASUVORK5CYII=" alt="LinkedIn" /> LinkedIn</a></li>
+<ul><li><a href="mailto:m.l.poulter@bris.ac.uk"><img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABv0lEQVRYw+3Xy4vNYRzH8ddvmGmwmBqLYRApolxT4o+YwgJl+AuUSyFZUGRhLddioZSIksvChp2lGks7TTYmJWOYho/NQ2eOuTjTGbM5n83vWp93z/fyfJ8qScyh2syxWgAtgPl1z8EHfJ4lv3asrPWt6spwBMdxvwaoGarKdRWeomeyFYAvVVUNQZIdOIVFMzQewzNcq6pqLEkXfkwVAsW4A8swgCc4ixUNmg/jNu6iJ8mnRpKwE+dxAY+wC6/q6afQUAnlaWzELfQ2AlBhMQ7jeknKPbiJb9OYv8VB3MFe3MOGSb0yXl+T9CfpSvK8vPuZ5E2SnUkWJjmS5GP+1liSF0nWJ+lOcinJSPk2mGRtktXl/o/a/jGDN+MB9uEGDuFdzT/fcRUHMFpif6yEsmmNqBdXcBKv0YeXGCyxPoE1pYT7Jkvw6RrRdOrEGWzCUewv1TGAfpzD8tluxe3YjcdYh/cF6nKj5jNZgdq82IKHJRe2FjD/C+C3urG9tR23AJo5kNQPJ82aB9IowHDpbBebBDBa+sXS6QDmYVsBaPaBpRdLsGBcQ5ngZDTawL4/k5zrqBnRJgRolWEL4L/qF5Iy1NIMBGnyAAAAAElFTkSuQmCC" alt="Email" /> Email</a></li>
 <li><a href="https://twitter.com/mlpoulter"><img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB5klEQVRYw+2Xv2sUQRTHvzM3tznkiis0hJjSwsJKtA0hNmntFAvDVRJSi2kEK/8C8S8QhFRBe39UWp0QgogKFkGDCgdmz12c975jEyGE3Z3duyIg++BV++b7PvvezJtdQzLgFM3ilK0FaAFagBjAnwZaT0MIVyeTyZyqngNwG8D+0bPvAF4WriIZylxVl0nuVsUc+YMibVVdUNVV7/2A5F7R2iqA8Wg0sqp6luSrirjdPM9LK5mmqVPVoareI3l4cn1lC5xz6HQ6P0XkGoAtAL8LwrZ7vR7LNPr9vgB4boy5CaDftAWXjseKyDzJ+yQ/HIu7E9scJN+W5UCktztZlhVWSUSWSK6dhCwB+DwNwDeSQxFZmeWYjcdjS3JSlsdUXMcked45dzALgIhcsNZ+nGYOWGvt1syDxtrVWH9iZ/xu2T6oYyRfVOnXEb6eJMlGnudnmiZX1csAVmatwHvvfa9p8jRNbezt6xzDf/5MRAYNS79ZR7suQCD5g+Qj7/1ijeRrJH0d3Sab610I4Um32/0aSX4DwA4AV0e0Kug1gG0A+yTfxOaBiMxbax8CGDZpVRXAMoABgMdl8yLLMpckyRVjzC0A64WXTcRMgx+TLwA+AfgFIAGwAODiNEmnBWg/SluA/xPgL9+aNs0RpOehAAAAAElFTkSuQmCC" alt="Twitter" /> Twitter</a></li>
-<li><a href="mailto:m.l.poulter@bris.ac.uk"><img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABv0lEQVRYw+3Xy4vNYRzH8ddvmGmwmBqLYRApolxT4o+YwgJl+AuUSyFZUGRhLddioZSIksvChp2lGks7TTYmJWOYho/NQ2eOuTjTGbM5n83vWp93z/fyfJ8qScyh2syxWgAtgPl1z8EHfJ4lv3asrPWt6spwBMdxvwaoGarKdRWeomeyFYAvVVUNQZIdOIVFMzQewzNcq6pqLEkXfkwVAsW4A8swgCc4ixUNmg/jNu6iJ8mnRpKwE+dxAY+wC6/q6afQUAnlaWzELfQ2AlBhMQ7jeknKPbiJb9OYv8VB3MFe3MOGSb0yXl+T9CfpSvK8vPuZ5E2SnUkWJjmS5GP+1liSF0nWJ+lOcinJSPk2mGRtktXl/o/a/jGDN+MB9uEGDuFdzT/fcRUHMFpif6yEsmmNqBdXcBKv0YeXGCyxPoE1pYT7Jkvw6RrRdOrEGWzCUewv1TGAfpzD8tluxe3YjcdYh/cF6nKj5jNZgdq82IKHJRe2FjD/C+C3urG9tR23AJo5kNQPJ82aB9IowHDpbBebBDBa+sXS6QDmYVsBaPaBpRdLsGBcQ5ngZDTawL4/k5zrqBnRJgRolWEL4L/qF5Iy1NIMBGnyAAAAAElFTkSuQmCC" alt="Email" /> Email</a></li>
+<li><a href="https://www.linkedin.com/in/martin-poulter-a523b836/"><img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABZElEQVRYw+2WvUrDUBTHf/c0tRCKT+BaEcHBRes7CC7SXRB9AlcHVxffQCcpFPwYRDfXzi6CtE4+gIhkSG5OHUzhEtoQStIs+UMg54vz49zLSYyqTqhQUmXzGiAPwA1wAJwBP2UAeBmxvogcTY04jkfGmPtlTuDJNYIgeCljAlkAW67h+/5mGQAmYw+EwKm19q7RaGwYY66BwiFM1Yso6xJ+AUPHXgO6yfswiU/VTeIAb8An0AZ2gNVMAlWdzHkGqbyeE+ulYgNVfY7jeN31R1Hkq+q5qsbz+ngUo8coivqtVsu6zmazGQAXqhoAl7MKC9mE4/H4Nt08NYkrYFQaQKfT0TAMV1R1X1UPrbVtN57APcyqLeQIrLW+iLzyf+kQkQ9r7a7ned9O2ntpExCR42nzROsicpJK+y0NANib4dvOBV8QgJfTVxrAwqoBaoDKAbL+Bxb9HOepzwWwFFV+BDVADfAH3Su5ujc+OzEAAAAASUVORK5CYII=" alt="LinkedIn" /> LinkedIn</a></li>
 </ul>
 <p class="credit">Image credit: <a href="https://commons.wikimedia.org/wiki/File:Active_Learning_with_Wikipedia_and_Wikimedia_Projects_with_Martin_Poulter.webm">Disruptive Media Learning Lab via Wikimedia Commons</a>, <abbr title="Creative Commons Attribution">CC-BY</abbr>.<br />Text on this page has a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</p>
 </div>
