@@ -31,10 +31,24 @@ h1,h2,h3 {
 	font-family:Merienda,Helvetica,Arial,sans-serif;
 	line-height:1.2em;
 	}
+.header, .footer, .main {
+	padding:1rem 1.5rem;
+	}
+.header img {
+	float:right;
+	height:135px;
+	width:114px;
+	box-shadow:0 0 12px #ccc;
+	margin-left:1rem;
+	}
 @media (min-width:55rem) {
 h1 {
 	font-size:5rem;
 	line-height:.5em;
+	}
+.header img {
+	height:270px;
+	width:229px;
 	}
 }
 .bio {max-width:30rem;
@@ -44,16 +58,7 @@ h1 {
 	column-width:29.5rem;
 	column-gap:1.9rem;
 	}
-.header, .footer, .main {
-	padding:1rem 1.5rem;
-	}
-.header img {
-	float:right;
-	height:270px;
-	width:229px;
-	box-shadow:0 0 12px #ccc;
-	margin-left:1rem;
-	}
+
 section {
 	max-width:30rem;
 	break-inside:avoid;
@@ -93,15 +98,15 @@ section,.footer {
 	column-count:2;
 	}
 .footer {
-	position:fixed;
-	bottom:0;
 	background-color:#fff;
 	padding-top:0;
-	width:100%;
+	max-width:100%;
 	}
 @media (min-width:61rem) {
 .footer {
+		position:fixed;
 		width:61rem;
+		bottom:0;
 		}
 	}
 .container {
