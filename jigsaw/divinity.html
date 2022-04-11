@@ -8,15 +8,16 @@
     <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
     <style>
         /* required snapPuzzle styles */
-        .snappuzzle-wrap { position: absolute; display: block;left:0;top:0;width:985px;height:720px;border:1px solid #666}
-        .snappuzzle-pile { position: absolute; left:1000px;top:0;height:80vh;width:450px ;border:1px solid #666}
+        .snappuzzle-wrap { position: absolute; display: block;left:0;top:0;width:100%;height:calc(70vw * .73125);}
+        .snappuzzle-pile { position: absolute; left:72vw; top:11vh; height:49vh; width:27vw; border:1px solid #666}
 
-#source_image {position: absolute; display: block;left:0;top:0;width:985px;height:720px}
-#puzzle-containment {position: absolute; left:3px;top:10vh;width:100%;display: block;height:720px}
+#source_image {position: absolute; display: block;left:0;top:0;width:70vw;height:calc(70vw * .73125)}
+#puzzle-containment {position: absolute; left:0;top:10vh;width:100%;display: block;height:90vh;border:#fff solid 0 3px}
+#guide { height:20vh; width:calc(1.368 * 20vh );}
 		</style>
 </head>
 <body>
-<div id="toprow"><div id="metadata"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Divinity_School_Interior_3%2C_Bodleian_Library%2C_Oxford%2C_UK_-_Diliff.jpg/320px-Divinity_School_Interior_3%2C_Bodleian_Library%2C_Oxford%2C_UK_-_Diliff.jpg" width="276" height="200" id="guide" />
+<div id="toprow"><div id="metadata"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Divinity_School_Interior_3%2C_Bodleian_Library%2C_Oxford%2C_UK_-_Diliff.jpg/320px-Divinity_School_Interior_3%2C_Bodleian_Library%2C_Oxford%2C_UK_-_Diliff.jpg" alt="Thumbnail of whole image" id="guide" />
 <p>Looking east in the interior of the Divinity School in the Bodleian Library, Oxford. Photo by David Iliff <a href="https://commons.wikimedia.org/wiki/File:Divinity_School_Interior_3,_Bodleian_Library,_Oxford,_UK_-_Diliff.jpg" target="_blank">via Wikimedia Commons</a>. License: CC-BY-SA 3.0</p></div>
 </div>
     <div id="puzzle-containment">
@@ -25,7 +26,7 @@
             </div></div>
             <div class="pure-u-1 pure-u-md-1-2">
                 <div id="pile">
-                    <div id="puzzle_solved" style="display:none;text-align:center;position:relative;top:25%">
+                    <div id="puzzle_solved" style="display:none;text-align:center;position:relative;top:5%">
                         <h2 style="margin:0 0 20px">Well done!</h2>
 						<a class="pure-button button-lg restart-puzzle">Restart this Puzzle</a>
 						<h3>Try these other jigsaws</h3>

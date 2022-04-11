@@ -8,11 +8,13 @@
     <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
     <style>
         /* required snapPuzzle styles */
-        .snappuzzle-wrap { position: absolute; display: block;left:0;top:0;width:1000px;height:593px;border:1px solid #666}
-        .snappuzzle-pile { position: absolute; left:1050px;top:0;height:80vh;width:450px ;border:1px solid #666}
+        .snappuzzle-wrap { position: absolute; display: block;left:0;top:0;width:100%;height:calc(70vw * .5935);}
+        .snappuzzle-pile { position: absolute; left:71vw; top:11vh; height:49vh; width:27vw; ;border:1px solid #666}
 
-#source_image {position: absolute; display: block;left:0;top:0;width:1000px;height:593px;}
-#puzzle-containment {position: absolute; left:3px;top:10vh;width:100%;display: block;height:593px}
+#source_image {position: absolute; display: block;left:0;top:0;width:70vw;height:calc(70vw * .5935)}
+
+#puzzle-containment {position: absolute; left:0;top:10vh;width:100%;display: block;height:90vh}
+#guide { height:20vh; width:calc(1.685 * 20vh );}
 		</style>
 </head>
 <body>
@@ -25,7 +27,7 @@
             </div></div>
             <div class="pure-u-1 pure-u-md-1-2">
                 <div id="pile">
-                    <div id="puzzle_solved" style="display:none;text-align:center;position:relative;top:25%">
+                    <div id="puzzle_solved" style="display:none;text-align:center;position:relative;top:5%">
                         <h2 style="margin:0 0 20px">Well done!</h2>
 						<a class="pure-button button-lg restart-puzzle">Restart this Puzzle</a>
 						<h3>Try these other jigsaws</h3>

@@ -1,4 +1,9 @@
 body { margin: 0; padding: 0; border: 0; min-width: 320px; color: #777; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
         html, button, input, select, textarea, .pure-g [class *= "pure-u"] { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 1.02em; }
         p, td { line-height: 1.5; }
         ul { padding: 0 0 0 20px; }
@@ -28,8 +33,9 @@ body { margin: 0; padding: 0; border: 0; min-width: 320px; color: #777; }
         .button-lg { margin: 5px 0; padding: .65em 1.6em; font-size: 105%; background-color:#def;color:#333;border:1px solid #666}
 		
 .snappuzzle-piece { cursor: move; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);}
-.snappuzzle-slot { position: absolute; background: #fff; opacity: 1;border:1px solid #666 }
+.snappuzzle-slot { position: absolute; background: #fff; opacity: 1;border:1px solid #bbb }
 .snappuzzle-slot-hover { background: #eee; }
+#source_image {border:0 solid #999;}
 
 #metadata {width:100%;border:1px solid #666;background-color:#666;color:#fff}
 #metadata p {padding:1em;margin:0}
