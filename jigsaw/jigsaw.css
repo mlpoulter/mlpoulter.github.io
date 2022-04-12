@@ -32,7 +32,7 @@ body { margin: 0; padding: 0; border: 0; min-width: 320px; color: #777; }
         /* Pure CSS */
         .button-lg { margin: 5px 0; padding: .65em 1.6em; font-size: 105%; background-color:#def;color:#333;border:1px solid #666}
 		
-.snappuzzle-piece { cursor: move; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);}
+.snappuzzle-piece { cursor: move; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);}
 .snappuzzle-slot { position: absolute; background: #fff; opacity: 1;border:1px solid #bbb }
 .snappuzzle-slot-hover { background: #eee; }
 #source_image {border:0 solid #999;}
