@@ -1,29 +1,29 @@
 <!DOCTYPE html><html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Burmese Royal Procession	jigsaw puzzle</title>
+    <title>Padded silk panel from Meiji-era Japan jigsaw puzzle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="jigsaw.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300">
     <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
     <style>
         /* required snapPuzzle styles */
-        .snappuzzle-wrap { position: absolute; display: block;left:0;top:1vh;width:100%;height:calc(70vw * .5935);}
+        .snappuzzle-wrap { position: absolute; display: block;left:0;top:1vh;width:100%;height:calc(70vw * .6012);}
         .snappuzzle-pile { position: absolute; left:72vw; top:11vh; height:77vh; width:27vw; ;border:1px solid #666}
 
-#source_image {position: absolute; display: block;left:0;top:0;width:70vw;height:calc(70vw * .5935)}
+#source_image {position: absolute; display: block;left:0;top:0;width:70vw;height:calc(70vw * .6012)}
 
 #puzzle-containment {position: absolute; left:0;top:10vh;width:100%;display: block;height:90vh}
-#guide { height:20vh; width:calc(1.685 * 20vh );}
+#guide { height:20vh; width:calc(1.663 * 20vh );}
 		</style>
 </head>
 <body>
-<div id="toprow"><div id="metadata"><img src="https://iiif.bodleian.ox.ac.uk/iiif/image/31730c22-1a9d-4f0b-9019-c031479dbd1d/full/,200/0/default.jpg" width="337" height="200" id="guide" />
-<p>Royal procession from an 18th century Burmese picture book <a href="https://digital.bodleian.ox.ac.uk/inquire/p/31730c22-1a9d-4f0b-9019-c031479dbd1d" target="_blank">via Digital Bodleian</a>. Shelfmark: MS. Burm. a. 7</p></div>
+<div id="toprow"><div id="metadata"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Khalili_Collections_Set_of_four_padded_silk_panels_1.jpg/320px-Khalili_Collections_Set_of_four_padded_silk_panels_1.jpg" width="320" height="192" id="guide" />
+<p>Padded silk panel from Meiji-era Japan <a href="https://commons.wikimedia.org/wiki/File:Khalili_Collections_Set_of_four_padded_silk_panels_1.jpg" target="_blank">via Wikimedia Commons</a>. The Khalili Collection of Japanese Art</p></div>
 </div>
     <div id="puzzle-containment">
             <div class="pure-u-1 pure-u-md-1-2"><div>
-                <img id="source_image" class="pure-img" src="https://iiif.bodleian.ox.ac.uk/iiif/image/31730c22-1a9d-4f0b-9019-c031479dbd1d/full/1000,/0/default.jpg">
+                <img id="source_image" class="pure-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Khalili_Collections_Set_of_four_padded_silk_panels_1.jpg/2560px-Khalili_Collections_Set_of_four_padded_silk_panels_1.jpg">
             </div></div>
             <div class="pure-u-1 pure-u-md-1-2">
                 <div id="pile">
@@ -61,7 +61,7 @@
         }
 
         $(function(){
- //           $('#pile').height($('#source_image').height());
+  //          $('#pile').height($('#source_image').height());
             start_puzzle(7);
 
             $('.restart-puzzle').click(function(){
@@ -70,7 +70,7 @@
             });
 
             $(window).resize(function(){
- //               $('#pile').height($('#source_image').height());
+//                $('#pile').height($('#source_image').height());
                 $('#source_image').snapPuzzle('refresh');
             });
         });
