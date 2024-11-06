@@ -1,0 +1,79 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Bug Peek jigsaw puzzle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="jigsaw.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300">
+    <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+    <style>
+        /* required snapPuzzle styles */
+        .snappuzzle-wrap { position: absolute; display: block;left:0;top:0;width:100%;height:calc(60vw * .66602);}
+        .snappuzzle-pile { position: absolute; left:72vw; top:11vh; height:77vh; width:27vw; ;border:1px solid #666}
+
+#source_image {position: absolute; display: block;left:0;top:0;width:60vw;height:calc(60vw * .66602)}
+
+#puzzle-containment {position: absolute; left:0;top:10vh;width:100%;display: block;height:90vh}
+#guide { height:20vh; width:calc(1.5015 * 20vh );}
+		</style>
+</head>
+<body>
+<div id="toprow"><div id="metadata"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/The_Bug_Peek.jpg/320px-The_Bug_Peek.jpg" width="320" height="213" id="guide" />
+<p>Aulacophora indica looking out from a leaf hole <a href="https://commons.wikimedia.org/wiki/File:The_Bug_Peek.jpg" target="_blank">Mildeep via Wikimedia Commons</a></p></div>
+</div>
+    <div id="puzzle-containment">
+            <div class="pure-u-1 pure-u-md-1-2"><div>
+                <img id="source_image" class="pure-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/The_Bug_Peek.jpg/2560px-The_Bug_Peek.jpg">
+            </div></div>
+            <div class="pure-u-1 pure-u-md-1-2">
+                <div id="pile">
+                    <div id="puzzle_solved" style="display:none;text-align:center;position:relative;top:5%">
+                        <h2 style="margin:0 0 20px">Well done!</h2>
+						<a class="pure-button button-lg restart-puzzle">Restart this Puzzle</a>
+						<h3>Try these other jigsaws</h3>
+						<a href="divinity.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Divinity_School_Interior_3%2C_Bodleian_Library%2C_Oxford%2C_UK_-_Diliff.jpg/320px-Divinity_School_Interior_3%2C_Bodleian_Library%2C_Oxford%2C_UK_-_Diliff.jpg" height="100" width="138" /></a>
+						<a href="sun.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Magnificent_CME_Erupts_on_the_Sun_-_August_31.jpg/320px-Magnificent_CME_Erupts_on_the_Sun_-_August_31.jpg" height="100" width="178" /></a>
+						<a href="holymountains.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/%D0%9D%D1%96%D0%B6%D0%BD%D0%B8%D0%B9_%D1%80%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D0%B8%D0%B9_%D1%81%D0%B2%D1%96%D1%82%D0%BB%D0%BE.jpg/320px-%D0%9D%D1%96%D0%B6%D0%BD%D0%B8%D0%B9_%D1%80%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D0%B8%D0%B9_%D1%81%D0%B2%D1%96%D1%82%D0%BB%D0%BE.jpg" height="100" width="150"></a>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="jquery.snap-puzzle.min.js"></script>
+    <script>
+        // jQuery UI Touch Punch 0.2.3 - must load after jQuery UI
+        // enables touch support for jQuery UI
+        !function(a){function f(a,b){if(!(a.originalEvent.touches.length>1)){a.preventDefault();var c=a.originalEvent.changedTouches[0],d=document.createEvent("MouseEvents");d.initMouseEvent(b,!0,!0,window,1,c.screenX,c.screenY,c.clientX,c.clientY,!1,!1,!1,!1,0,null),a.target.dispatchEvent(d)}}if(a.support.touch="ontouchend"in document,a.support.touch){var e,b=a.ui.mouse.prototype,c=b._mouseInit,d=b._mouseDestroy;b._touchStart=function(a){var b=this;!e&&b._mouseCapture(a.originalEvent.changedTouches[0])&&(e=!0,b._touchMoved=!1,f(a,"mouseover"),f(a,"mousemove"),f(a,"mousedown"))},b._touchMove=function(a){e&&(this._touchMoved=!0,f(a,"mousemove"))},b._touchEnd=function(a){e&&(f(a,"mouseup"),f(a,"mouseout"),this._touchMoved||f(a,"click"),e=!1)},b._mouseInit=function(){var b=this;b.element.bind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),c.call(b)},b._mouseDestroy=function(){var b=this;b.element.unbind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),d.call(b)}}}(jQuery);
+
+        function start_puzzle(x){
+            $('#puzzle_solved').hide();
+            $('#source_image').snapPuzzle({
+                rows: x, columns: x,
+                pile: '#pile',
+                containment: '#puzzle-containment',
+                onComplete: function(){
+                    $('#source_image').fadeOut(150).fadeIn();
+                    $('#puzzle_solved').show();
+                }
+            });
+        }
+
+        $(function(){
+  //          $('#pile').height($('#source_image').height());
+            start_puzzle(9);
+
+            $('.restart-puzzle').click(function(){
+                $('#source_image').snapPuzzle('destroy');
+                start_puzzle(9);
+            });
+
+            $(window).resize(function(){
+ //               $('#pile').height($('#source_image').height());
+                $('#source_image').snapPuzzle('refresh');
+            });
+        });
+    </script>
+</body>
+</html>
