@@ -1,4 +1,4 @@
-body { margin: 0; padding: 0; border: 0; min-width: 320px; color: #777; }
+body { margin: 0; padding: 0; border: 0; min-width: 320px; background-color: #000; color:#eee;}
 *,
 *::before,
 *::after {
@@ -12,17 +12,18 @@ body { margin: 0; padding: 0; border: 0; min-width: 320px; color: #777; }
         th, td { padding: 10px; text-align: left; vertical-align: top; font-size: .9em; font-weight: normal; border-right: 1px solid #fff; }
         td:first-child { white-space: nowrap; color: #008000; width: 1%; font-style: italic; }
 
-        h1, h2, h3 { color: #4b4b4b; font-family: "Source Sans Pro", sans-serif; font-weight: bold; margin: 0 0 1.2em; }
-        h1 { font-size: 4.5em; color: #1f8dd6; margin: 0 0 .4em; }
-        h2 { font-size: 3em; color: #313131; }
-        h3 { font-size: 1.8em; color: #4b4b4b; margin: 1.8em 0 .8em }
+        h1, h2, h3 { font-family: "Source Sans Pro", sans-serif; font-weight: bold; margin: 0 0 1.2em; }
+        h1 { font-size: 4.5em; color: #e7b96e; margin: 0 0 .4em; }
+        h2 { font-size: 3em; color: #515151; }
+        h3 { font-size: 1.8em; color: #6b6b6b; margin: 1.8em 0 .8em }
         h4 { font: bold 1em sans-serif; color: #636363; margin: 4em 0 1em; }
-        a { color: #4e99c7; text-decoration: none; }
+        a { color: #e7b96e; text-decoration: none; }
         a:hover { text-decoration: underline; }
         p, pre { margin: 0 0 1.2em; }
         ::selection { color: #fff; background: #328efd; }
         ::-moz-selection { color: #fff; background: #328efd; }
-
+.panel {width:320px;background-color:rgb(24, 28, 34);}
+.panel span {display:inline-block;padding:.2rem .5rem .5rem .5rem}
         @media (max-width:480px) {
             h1 { font-size: 3em; }
             h2 { font-size: 1.8em; }
@@ -33,8 +34,8 @@ body { margin: 0; padding: 0; border: 0; min-width: 320px; color: #777; }
         .button-lg { margin: 5px 0; padding: .65em 1.6em; font-size: 105%; background-color:#def;color:#333;border:1px solid #666}
 		
 .snappuzzle-piece { cursor: move; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);}
-.snappuzzle-slot { position: absolute; background: #fff; opacity: 1;border:1px solid #bbb }
-.snappuzzle-slot-hover { background: #eee; }
+.snappuzzle-slot { position: absolute; background: #bbb; opacity: 1;border:1px solid #888 }
+.snappuzzle-slot-hover { background: #999; }
 #source_image {border:0 solid #999;}
 
 #metadata {width:100%;border:1px solid #666;background-color:#666;color:#fff}
